@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    
+}
+
+:root{
+  --bg-primary-color:rgb(28, 28, 28);
+  --text-primary-color:rgb(228, 227, 227);
+  --space-xs:4px;
+  --space-lg:10px;
+  --border-primary-color:#ffffff;
+  --border-radius-xs:4px;
+  --bg-fill-color:rgb(112, 57, 25);
+  --bg-food-colr:rgb(249, 246, 246);
+
+}
+
+html{
+    background-color: var(--bg-primary-color);
+    color: var(--text-primary-color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+main,section{
+    height: 100%;
+    width: 100%;
+}
+
+section{
+    padding: var(--space-xs);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap:var(--space-xs)
+
+}
+
+.infos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info{
+    padding:var(--space-xs);
+    border: 1px solid var(--border-primary-color);
+    border-radius: var(--border-radius-xs);
+}
+
+.boards{
+    border:1px solid var(--border-primary-color);
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(50px,1fr));
+    grid-template-rows: repeat(auto-fill,minmax(50px,1fr));
+}
+
+.block{
+    height: 50px;
+    width: 50px;
+    border:1px solid var(--border-primary-color);
+    border-radius: 50%;
+}
+
+.fill{
+    background-color: var(--bg-fill-color);
+}
+
+.food{
+    background-color: var(--bg-food-colr);
+}
+
+.modal{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    /*background-color: #5b2d2d;*/
+   backdrop-filter:blur(4px);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-image:url("./1262686.jpg");
+   background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.modal .start-game,.modal .game-over{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.modal .game-over{
+    display: none;
+}
+.btn{
+    padding: var(--space-lg);
+    border: none;
+    border-radius: var(--border-radius-xs);
+    cursor: pointer;
+    transition: all 0.3s ease ;
+
+   
+}
+
+
+    .btn:hover{
+        transform:scale(1.1);
+        background-color: rgb(187, 140, 83);
+    }
+
+    .head{
+        background-color: rgb(255, 149, 0);
+    }
